@@ -1,9 +1,9 @@
-Name: YOUR NAME HERE
+Name: Lucas Huang
 
-| Date    |  Time  |                                     Update |
-|:--------|:------:|-------------------------------------------:|
-| April 5 | 9-10pm | I tried to write abstract, efficient code. |
-|         |        |                                            |
+| Date   |   Time   |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  Update |
+|:-------|:--------:|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| Sep 25 | 1-1:30pm | I began thinking about the problem in a way where you could create a number for each word and then when you find the word you use a map to check if the word matches the word at that spot in the array I think the main challenge with this would be that you would need to find out what the number of the word you are trying to check would be. Maybe I could make an array and put the ASCII number for each letter in its array and then compare that, but I feel like that doesn't make the code very fluent. I will continue thinking about this problem later. |
+|        |          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 
 
 To add a new row to the table, click into a cell and then hit shift-enter.

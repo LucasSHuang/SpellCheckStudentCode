@@ -32,10 +32,13 @@ public class SpellCheck {
      * @return String[] of all mispelled words in the order they appear in text. No duplicates.
      */
     public String[] checkWords(String[] text, String[] dictionary) {
+        Trie trie = new Trie();
         ArrayList<String> misspelled = new ArrayList<String>();
+        for (int i = 0; i < dictionary.length; i++) {
+            trie.insert(dictionary[i]);
+        }
         for (int i = 0; i < text.length; i++) {
-            int index = Arrays.binarySearch(dictionary, text[i]);
-            if (index < 0 && !misspelled.contains(text[i])) {
+            if (!trie.find(text[i]) && !misspelled.contains(text[i])) {
                 misspelled.add(text[i]);
             }
         }

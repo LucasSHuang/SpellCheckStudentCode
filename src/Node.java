@@ -3,7 +3,7 @@ public class Node {
     private Node[] next;
 
     public Node() {
-        next = new Node[26];
+        next = new Node[256];
         isWord = false;
     }
 

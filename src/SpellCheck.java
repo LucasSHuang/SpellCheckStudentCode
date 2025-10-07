@@ -33,15 +33,19 @@ public class SpellCheck {
      */
     public String[] checkWords(String[] text, String[] dictionary) {
         Trie trie = new Trie();
-        ArrayList<String> misspelled = new ArrayList<String>();
+        Trie misspelled = new Trie();
+        ArrayList<String> order = new ArrayList<String>();
         for (int i = 0; i < dictionary.length; i++) {
             trie.insert(dictionary[i]);
         }
         for (int i = 0; i < text.length; i++) {
-            if (!trie.find(text[i]) && !misspelled.contains(text[i])) {
-                misspelled.add(text[i]);
+            if (!trie.find(text[i])) {
+                if (!misspelled.find(text[i])) {
+                    misspelled.insert(text[i]);
+                    order.add(text[i]);
+                }
             }
         }
-        return misspelled.toArray(new String[0]);
+        return order.toArray(new String[0]);
     }
 }

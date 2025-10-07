@@ -9,10 +9,7 @@ public class Trie {
         Node current = root;
         for (int i = 0; i < word.length(); i++) {
             char c = word.charAt(i);
-            if (c < 'a' || c > 'z') {
-                continue;
-            }
-            int index = c - 'a';
+            int index = c;
             if (current.getChild(index) == null) {
                 current.setChild(index, new Node());
             }
@@ -25,7 +22,7 @@ public class Trie {
         Node current = root;
         for (int i = 0; i < word.length(); i++) {
             char c = word.charAt(i);
-            int index = c - 'a';
+            int index = c;
             if (current.getChild(index) == null) {
                 return false;
             }

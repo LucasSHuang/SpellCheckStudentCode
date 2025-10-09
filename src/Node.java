@@ -1,9 +1,10 @@
 public class Node {
+    private static int ASCII_VALUES = 256;
     private boolean isWord;
     private Node[] next;
 
     public Node() {
-        next = new Node[256];
+        next = new Node[ASCII_VALUES];
         isWord = false;
     }
 

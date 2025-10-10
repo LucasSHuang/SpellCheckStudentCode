@@ -24,13 +24,7 @@ public class SpellCheck {
     private static final int K_START = 66847;
     private static final int L_START = 68384;
     private static final int M_START = 72940;
-    /**
-     * checkWords finds all words in text that are not present in dictionary
-     *
-     * @param text The list of all words in the text.
-     * @param dictionary The list of all accepted words.
-     * @return String[] of all mispelled words in the order they appear in text. No duplicates.
-     */
+
     public String[] checkWords(String[] text, String[] dictionary) {
         TST tst = new TST();
         TST misspelled = new TST();
